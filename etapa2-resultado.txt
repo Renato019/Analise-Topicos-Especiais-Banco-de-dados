@@ -1,0 +1,143 @@
+Modelo: paraphrase-multilingual-MiniLM-L12-v2
+Tempo para adicionar as frases: 27.0 segundos
+
+1. Quem se machucou durante o jogo?
+   Busca vetorial:
+      - O jogador reserva sofreu uma lesão muscular no jogo do returno.  (distância: 0.2634)
+      - O zagueiro, no estádio do rival, marcou um golaço.  (distância: 0.2775)
+      - O canal de esportes noticiou a lesão do artilheiro no confronto pela copa.  (distância: 0.2800)
+      - O jogador reserva sofreu uma lesão muscular na abertura da rodada.  (distância: 0.2814)
+      - A torcida visitante, no gramado encharcado, vaiou o jogador adversário.  (distância: 0.2878)
+   Busca lexical (BM25):
+      - O atual campeão empatou o jogo de ida durante a pré-temporada.
+      - O favorito ao título empatou o jogo de ida durante a pré-temporada.
+      - A charanga, no jogo do returno, cantou durante os noventa minutos.
+      - No jogo do returno, a charanga cantou durante os noventa minutos.
+      - No jogo do returno, a arquibancada cantou durante os noventa minutos.
+
+2. O juiz usou a tecnologia para rever a jogada?
+   Busca vetorial:
+      - No gramado encharcado, o juiz da partida revisou o lance no monitor.  (distância: 0.2679)
+      - O juiz da partida, no gramado encharcado, marcou o impedimento.  (distância: 0.2958)
+      - O juiz da partida revisou o lance no monitor para delírio da torcida.  (distância: 0.3007)
+      - O juiz da partida, nos acréscimos, revisou o toque de mão.  (distância: 0.3177)
+      - No segundo tempo, o juiz da partida revisou o lance no monitor.  (distância: 0.3277)
+   Busca lexical (BM25):
+      - O juiz da partida revisou a jogada do gol sob forte chuva.
+      - Na Arena da Baixada, o juiz da partida revisou a jogada do gol.
+      - Na estreia do campeonato, o juiz da partida revisou a jogada do gol.
+      - O juiz da partida, na decisão do estadual, revisou a jogada do gol.
+      - O juiz da partida revisou a jogada do gol na quarta-feira à noite.
+
+3. Como os fãs mostraram insatisfação com o treinador?
+   Busca vetorial:
+      - O capitão do time, na reta final da temporada, deu um drible desconcertante.  (distância: 0.2997)
+      - No jogo do returno, o comentarista noticiou a demissão do treinador.  (distância: 0.3155)
+      - Na abertura da rodada, o capitão do time deu um drible desconcertante.  (distância: 0.3160)
+      - O capitão do time, no estádio lotado, sofreu um pênalti.  (distância: 0.3162)
+      - O capitão do time, na despedida do ídolo, deu um drible desconcertante.  (distância: 0.3251)
+   Busca lexical (BM25):
+      - Em pleno feriado, o treinador interino comandou o coletivo com os titulares.
+      - Sob forte chuva, o treinador interino comandou o coletivo com os titulares.
+      - O treinador interino comandou o coletivo com os titulares na decisão do estadual.
+      - Na reta final da temporada, o treinador interino comandou o coletivo com os titulares.
+      - O fisiologista, no segundo tempo, comandou o coletivo com os titulares.
+
+4. Quais equipes compraram novos atletas?
+   Busca vetorial:
+      - O time sub-15, na volta das férias, revelou um novo talento.  (distância: 0.3911)
+      - O time sub-20, no estádio lotado, revelou um novo talento.  (distância: 0.3912)
+      - No clássico de quarta-feira, o clube rival apresentou o novo uniforme.  (distância: 0.4011)
+      - No estádio do rival, o clube rival apresentou o novo uniforme.  (distância: 0.4057)
+      - Pela primeira vez na temporada, o clube rival apresentou o novo uniforme.  (distância: 0.4135)
+   Busca lexical (BM25):
+      - O fisiologista planejou a recuperação dos atletas sob forte chuva.
+      - Nos acréscimos, o preparador físico planejou a recuperação dos atletas.
+      - O técnico, após o intervalo, planejou a recuperação dos atletas.
+      - No estádio lotado, o técnico planejou a recuperação dos atletas.
+      - O coordenador técnico planejou a recuperação dos atletas em pleno feriado.
+
+5. Garotos que subiram para a equipe adulta
+   Busca vetorial:
+      - Nos acréscimos, o menino da comunidade estreou no time profissional.  (distância: 0.3233)
+      - O time sub-20, fora de casa, estreou no time profissional.  (distância: 0.3667)
+      - O treinador do sub-17 estreou no time profissional no gramado encharcado.  (distância: 0.3783)
+      - O time do interior empatou o jogo de ida nos acréscimos.  (distância: 0.3823)
+      - O time da casa, no jogo de ida, empatou com o rival.  (distância: 0.3827)
+   Busca lexical (BM25):
+      - Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.
+      - A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.
+      - A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.
+      - Na partida transmitida para todo o país, a equipe de arbitragem deu o apito final.
+      - A equipe de arbitragem expulsou o volante adversário na partida transmitida para todo o país.
+
+6. O que o investidor da SAF fez?
+   Busca vetorial:
+      - O investidor da SAF sondou o técnico da seleção no gramado encharcado.  (distância: 0.2442)
+      - O investidor da SAF, logo no primeiro minuto, negociou o empréstimo do lateral.  (distância: 0.2571)
+      - O investidor da SAF, na estreia do campeonato, negociou o empréstimo do lateral.  (distância: 0.2655)
+      - No domingo à tarde, o investidor da SAF negociou o empréstimo do lateral.  (distância: 0.2762)
+      - O investidor da SAF, durante a pré-temporada, negociou a liberação do meia.  (distância: 0.2782)
+   Busca lexical (BM25):
+      - Após o intervalo, o investidor da SAF sondou o técnico da seleção.
+      - O investidor da SAF, no estádio lotado, apresentou o novo uniforme.
+      - O investidor da SAF apresentou o novo uniforme no segundo tempo.
+      - O investidor da SAF sondou o técnico da seleção no gramado encharcado.
+      - Nos acréscimos, o investidor da SAF recusou uma proposta milionária.
+
+7. Quem conquistou a Copinha?
+   Busca vetorial:
+      - O olheiro, na partida transmitida para todo o país, conquistou a Copinha.  (distância: 0.3431)
+      - O olheiro conquistou a Copinha no confronto pela copa.  (distância: 0.3726)
+      - No clássico de quarta-feira, o menino da comunidade conquistou a Copinha.  (distância: 0.4045)
+      - O atual campeão, no gramado encharcado, venceu por goleada.  (distância: 0.4301)
+      - O menino da comunidade, no clássico de quarta-feira, conquistou a Copinha.  (distância: 0.4322)
+   Busca lexical (BM25):
+      - A promessa do clube, nos acréscimos, conquistou a Copinha.
+      - Sob forte chuva, o jovem goleiro conquistou a Copinha.
+      - O olheiro conquistou a Copinha no confronto pela copa.
+      - O time sub-20, nos acréscimos, conquistou a Copinha.
+      - O jovem goleiro conquistou a Copinha após o intervalo.
+
+8. Quem garantiu vaga na Libertadores?
+   Busca vetorial:
+      - O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (distância: 0.3131)
+      - O favorito ao título garantiu a vaga na Libertadores em meio à crise.  (distância: 0.3683)
+      - O favorito ao título, durante a pré-temporada, garantiu a vaga na Libertadores.  (distância: 0.3964)
+      - O vice-líder, na partida transmitida para todo o país, garantiu a vaga na Libertadores.  (distância: 0.4044)
+      - O atual campeão, na decisão do estadual, garantiu a vaga na Libertadores.  (distância: 0.4097)
+   Busca lexical (BM25):
+      - O lanterna, em pleno feriado, garantiu a vaga na Libertadores.
+      - Na despedida do ídolo, o lanterna garantiu a vaga na Libertadores.
+      - Fora de casa, o time visitante garantiu a vaga na Libertadores.
+      - Fora de casa, o atual campeão garantiu a vaga na Libertadores.
+      - O lanterna garantiu a vaga na Libertadores em meio à crise.
+
+9. O que aconteceu com o time sub-17?
+   Busca vetorial:
+      - Nos acréscimos, o treinador do sub-17 disputou a final do sub-17.  (distância: 0.2322)
+      - O treinador do sub-17, no jogo do centenário do clube, disputou a final do sub-17.  (distância: 0.2914)
+      - O treinador do sub-17, no jogo de ida, disputou a final do sub-17.  (distância: 0.2914)
+      - No estádio lotado, o treinador do sub-17 disputou a final do sub-17.  (distância: 0.2979)
+      - O treinador do sub-17 estreou no time profissional após o intervalo.  (distância: 0.3047)
+   Busca lexical (BM25):
+      - Sob forte chuva, o treinador do sub-17 estreou com gol.
+      - O time sub-20 disputou a final do sub-17 após o intervalo.
+      - O time sub-15 disputou a final do sub-17 após o intervalo.
+      - O treinador do sub-17 estreou com gol na volta das férias.
+      - O time sub-20 disputou a final do sub-17 nos acréscimos.
+
+10. O que a imprensa falou sobre o esquema tático?
+   Busca vetorial:
+      - Antes do intervalo, a repórter de campo criticou o esquema tático.  (distância: 0.3733)
+      - A coluna do jornal, na rodada de domingo, revelou os bastidores da negociação.  (distância: 0.4122)
+      - A repórter de campo revelou os bastidores da negociação no meio da semana.  (distância: 0.4192)
+      - A repórter de campo criticou o esquema tático no gramado encharcado.  (distância: 0.4299)
+      - Durante a pré-temporada, a coluna do jornal criticou o esquema tático.  (distância: 0.4307)
+   Busca lexical (BM25):
+      - O narrador criticou o esquema tático após o intervalo.
+      - No segundo tempo, o setorista criticou o esquema tático.
+      - Antes do intervalo, o comentarista criticou o esquema tático.
+      - O jornalista esportivo criticou o esquema tático após o intervalo.
+      - O setorista criticou o esquema tático na volta das férias.
+
