@@ -1,0 +1,743 @@
+Modelo: BAAI/bge-m3
+Tempo para adicionar as frases: 1146.2 segundos
+
+1. Quem se machucou durante o jogo?
+   Busca vetorial:
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (distância: 0.2960)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (distância: 0.2970)
+      - [Partida] O capitão do time sofreu uma lesão muscular em meio à crise.  (distância: 0.3060)
+      - [Partida] No estádio lotado, o meia-armador sofreu uma lesão muscular.  (distância: 0.3060)
+      - [Partida] No jogo de ida, o capitão do time sofreu uma lesão muscular.  (distância: 0.3061)
+   Busca lexical (BM25):
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.
+      - [Torcida] No jogo do returno, a charanga cantou durante os noventa minutos.
+      - [Torcida] No jogo do returno, a arquibancada cantou durante os noventa minutos.
+   RRF com k = 1:
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+   RRF com k = 10:
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+   RRF com k = 60:
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+   RRF com k = 100:
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+   RRF com k = 1000:
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+      - [Torcida] No jogo do returno, a charanga cantou durante os noventa minutos.  (lexical: 4º | vetorial: -)
+      - [Torcida] No jogo do returno, a arquibancada cantou durante os noventa minutos.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Torcida] A charanga, no jogo do returno, cantou durante os noventa minutos.  (lexical: 3º | vetorial: -)
+      - [Torcida] No jogo do returno, a charanga cantou durante os noventa minutos.  (lexical: 4º | vetorial: -)
+      - [Torcida] No jogo do returno, a arquibancada cantou durante os noventa minutos.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Campeonato] O atual campeão empatou o jogo de ida durante a pré-temporada.  (lexical: 1º | vetorial: -)
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Campeonato] O favorito ao título empatou o jogo de ida durante a pré-temporada.  (lexical: 2º | vetorial: -)
+      - [Partida] O capitão do time sofreu uma lesão muscular em meio à crise.  (lexical: - | vetorial: 3º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Partida] O capitão do time sofreu uma lesão muscular em meio à crise.  (lexical: - | vetorial: 3º)
+      - [Partida] No estádio lotado, o meia-armador sofreu uma lesão muscular.  (lexical: - | vetorial: 4º)
+      - [Partida] No jogo de ida, o capitão do time sofreu uma lesão muscular.  (lexical: - | vetorial: 5º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Partida] O atacante, em plena data FIFA, sofreu uma lesão muscular.  (lexical: - | vetorial: 1º)
+      - [Partida] O atacante sofreu uma lesão muscular no estádio lotado.  (lexical: - | vetorial: 2º)
+      - [Partida] O capitão do time sofreu uma lesão muscular em meio à crise.  (lexical: - | vetorial: 3º)
+      - [Partida] No estádio lotado, o meia-armador sofreu uma lesão muscular.  (lexical: - | vetorial: 4º)
+      - [Partida] No jogo de ida, o capitão do time sofreu uma lesão muscular.  (lexical: - | vetorial: 5º)
+
+2. O juiz usou a tecnologia para rever a jogada?
+   Busca vetorial:
+      - [Arbitragem] No jogo do returno, o juiz da partida revisou o lance no monitor.  (distância: 0.2260)
+      - [Arbitragem] No gramado encharcado, o juiz da partida revisou o lance no monitor.  (distância: 0.2396)
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (distância: 0.2603)
+      - [Arbitragem] No segundo tempo, o juiz da partida revisou o lance no monitor.  (distância: 0.2647)
+      - [Arbitragem] O árbitro de vídeo, em meio à crise, revisou o lance no monitor.  (distância: 0.2728)
+   Busca lexical (BM25):
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.
+      - [Arbitragem] O juiz da partida, na decisão do estadual, revisou a jogada do gol.
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.
+   RRF com k = 1:
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] No jogo do returno, o juiz da partida revisou o lance no monitor.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] No gramado encharcado, o juiz da partida revisou o lance no monitor.  (lexical: 98º | vetorial: 2º)
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+   RRF com k = 10:
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.  (lexical: 3º | vetorial: 53º)
+      - [Arbitragem] No gramado encharcado, o juiz da partida revisou o lance no monitor.  (lexical: 98º | vetorial: 2º)
+   RRF com k = 60:
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] O árbitro, fora de casa, revisou a jogada do gol.  (lexical: 19º | vetorial: 12º)
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.  (lexical: 3º | vetorial: 53º)
+   RRF com k = 100:
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] O árbitro, fora de casa, revisou a jogada do gol.  (lexical: 19º | vetorial: 12º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.  (lexical: 5º | vetorial: 48º)
+   RRF com k = 1000:
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] O árbitro, fora de casa, revisou a jogada do gol.  (lexical: 19º | vetorial: 12º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.  (lexical: 5º | vetorial: 48º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.  (lexical: 3º | vetorial: 53º)
+      - [Arbitragem] O juiz da partida, na decisão do estadual, revisou a jogada do gol.  (lexical: 4º | vetorial: 68º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.  (lexical: 5º | vetorial: 48º)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.  (lexical: 3º | vetorial: 53º)
+      - [Arbitragem] O juiz da partida, na decisão do estadual, revisou a jogada do gol.  (lexical: 4º | vetorial: 68º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.  (lexical: 5º | vetorial: 48º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] Na Arena da Baixada, o juiz da partida revisou a jogada do gol.  (lexical: 2º | vetorial: 27º)
+      - [Arbitragem] Na estreia do campeonato, o juiz da partida revisou a jogada do gol.  (lexical: 3º | vetorial: 53º)
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol na quarta-feira à noite.  (lexical: 5º | vetorial: 48º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Arbitragem] No jogo do returno, o juiz da partida revisou o lance no monitor.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] No gramado encharcado, o juiz da partida revisou o lance no monitor.  (lexical: 98º | vetorial: 2º)
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] O juiz da partida revisou a jogada do gol sob forte chuva.  (lexical: 1º | vetorial: 23º)
+      - [Arbitragem] No segundo tempo, o juiz da partida revisou o lance no monitor.  (lexical: 87º | vetorial: 4º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Arbitragem] No jogo do returno, o juiz da partida revisou o lance no monitor.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] No gramado encharcado, o juiz da partida revisou o lance no monitor.  (lexical: 98º | vetorial: 2º)
+      - [Arbitragem] O juiz da partida revisou o lance no monitor para delírio da torcida.  (lexical: 12º | vetorial: 3º)
+      - [Arbitragem] No segundo tempo, o juiz da partida revisou o lance no monitor.  (lexical: 87º | vetorial: 4º)
+      - [Arbitragem] O árbitro de vídeo, em meio à crise, revisou o lance no monitor.  (lexical: - | vetorial: 5º)
+
+3. Como os fãs mostraram insatisfação com o treinador?
+   Busca vetorial:
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (distância: 0.2603)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (distância: 0.2666)
+      - [Torcida] Na reta final da temporada, o grupo de torcedores pediu a saída do técnico.  (distância: 0.2719)
+      - [Torcida] Pela primeira vez na temporada, a torcida mandante pediu a saída do técnico.  (distância: 0.2733)
+      - [Torcida] O torcedor, em meio à crise, pediu a saída do técnico.  (distância: 0.2755)
+   Busca lexical (BM25):
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.
+      - [Treinamento] Na reta final da temporada, o treinador interino comandou o coletivo com os titulares.
+      - [Treinamento] O fisiologista, no segundo tempo, comandou o coletivo com os titulares.
+   RRF com k = 1:
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   RRF com k = 10:
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   RRF com k = 60:
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   RRF com k = 100:
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   RRF com k = 1000:
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+      - [Treinamento] Na reta final da temporada, o treinador interino comandou o coletivo com os titulares.  (lexical: 4º | vetorial: -)
+      - [Treinamento] O fisiologista, no segundo tempo, comandou o coletivo com os titulares.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+      - [Treinamento] Na reta final da temporada, o treinador interino comandou o coletivo com os titulares.  (lexical: 4º | vetorial: -)
+      - [Treinamento] O fisiologista, no segundo tempo, comandou o coletivo com os titulares.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Treinamento] Em pleno feriado, o treinador interino comandou o coletivo com os titulares.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Sob forte chuva, o treinador interino comandou o coletivo com os titulares.  (lexical: 2º | vetorial: -)
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O treinador interino comandou o coletivo com os titulares na decisão do estadual.  (lexical: 3º | vetorial: -)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Torcida] Na reta final da temporada, o grupo de torcedores pediu a saída do técnico.  (lexical: - | vetorial: 3º)
+      - [Torcida] Pela primeira vez na temporada, a torcida mandante pediu a saída do técnico.  (lexical: - | vetorial: 4º)
+      - [Torcida] O torcedor, em meio à crise, pediu a saída do técnico.  (lexical: - | vetorial: 5º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Torcida] Pela primeira vez na temporada, o torcedor pediu a saída do técnico.  (lexical: - | vetorial: 1º)
+      - [Torcida] A torcida organizada pediu a saída do técnico pela primeira vez na temporada.  (lexical: - | vetorial: 2º)
+      - [Torcida] Na reta final da temporada, o grupo de torcedores pediu a saída do técnico.  (lexical: - | vetorial: 3º)
+      - [Torcida] Pela primeira vez na temporada, a torcida mandante pediu a saída do técnico.  (lexical: - | vetorial: 4º)
+      - [Torcida] O torcedor, em meio à crise, pediu a saída do técnico.  (lexical: - | vetorial: 5º)
+
+4. Quais equipes compraram novos atletas?
+   Busca vetorial:
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (distância: 0.3955)
+      - [Imprensa] No segundo tempo, o canal de esportes revelou o novo patrocinador.  (distância: 0.3971)
+      - [Mercado da bola] No último jogo do ano, o empresário anunciou a chegada do novo técnico.  (distância: 0.3977)
+      - [Imprensa] O canal de esportes revelou o novo patrocinador na volta das férias.  (distância: 0.3978)
+      - [Imprensa] O canal de esportes, após o intervalo, revelou o novo patrocinador.  (distância: 0.3981)
+   Busca lexical (BM25):
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.
+      - [Treinamento] No estádio lotado, o técnico planejou a recuperação dos atletas.
+      - [Treinamento] O coordenador técnico planejou a recuperação dos atletas em pleno feriado.
+   RRF com k = 1:
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+      - [Imprensa] No segundo tempo, o canal de esportes revelou o novo patrocinador.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.  (lexical: 3º | vetorial: -)
+   RRF com k = 10:
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+      - [Imprensa] No segundo tempo, o canal de esportes revelou o novo patrocinador.  (lexical: - | vetorial: 2º)
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.  (lexical: 3º | vetorial: -)
+   RRF com k = 60:
+      - [Treinamento] Na reta final da temporada, o técnico planejou a recuperação dos atletas.  (lexical: 33º | vetorial: 43º)
+      - [Treinamento] O departamento médico, no jogo de ida, planejou a recuperação dos atletas.  (lexical: 29º | vetorial: 79º)
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+   RRF com k = 100:
+      - [Treinamento] Na reta final da temporada, o técnico planejou a recuperação dos atletas.  (lexical: 33º | vetorial: 43º)
+      - [Treinamento] O departamento médico, no jogo de ida, planejou a recuperação dos atletas.  (lexical: 29º | vetorial: 79º)
+      - [Mercado da bola] O diretor de futebol pagou as luvas do reforço na abertura da rodada.  (lexical: 88º | vetorial: 88º)
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+   RRF com k = 1000:
+      - [Treinamento] Na reta final da temporada, o técnico planejou a recuperação dos atletas.  (lexical: 33º | vetorial: 43º)
+      - [Treinamento] O departamento médico, no jogo de ida, planejou a recuperação dos atletas.  (lexical: 29º | vetorial: 79º)
+      - [Mercado da bola] O diretor de futebol pagou as luvas do reforço na abertura da rodada.  (lexical: 88º | vetorial: 88º)
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.  (lexical: 3º | vetorial: -)
+      - [Treinamento] No estádio lotado, o técnico planejou a recuperação dos atletas.  (lexical: 4º | vetorial: -)
+      - [Treinamento] O coordenador técnico planejou a recuperação dos atletas em pleno feriado.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Treinamento] Na reta final da temporada, o técnico planejou a recuperação dos atletas.  (lexical: 33º | vetorial: 43º)
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.  (lexical: 3º | vetorial: -)
+      - [Treinamento] No estádio lotado, o técnico planejou a recuperação dos atletas.  (lexical: 4º | vetorial: -)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Treinamento] Na reta final da temporada, o técnico planejou a recuperação dos atletas.  (lexical: 33º | vetorial: 43º)
+      - [Treinamento] O departamento médico, no jogo de ida, planejou a recuperação dos atletas.  (lexical: 29º | vetorial: 79º)
+      - [Treinamento] O fisiologista planejou a recuperação dos atletas sob forte chuva.  (lexical: 1º | vetorial: -)
+      - [Treinamento] Nos acréscimos, o preparador físico planejou a recuperação dos atletas.  (lexical: 2º | vetorial: -)
+      - [Treinamento] O técnico, após o intervalo, planejou a recuperação dos atletas.  (lexical: 3º | vetorial: -)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+      - [Imprensa] No segundo tempo, o canal de esportes revelou o novo patrocinador.  (lexical: - | vetorial: 2º)
+      - [Mercado da bola] No último jogo do ano, o empresário anunciou a chegada do novo técnico.  (lexical: - | vetorial: 3º)
+      - [Imprensa] O canal de esportes revelou o novo patrocinador na volta das férias.  (lexical: - | vetorial: 4º)
+      - [Imprensa] O canal de esportes, após o intervalo, revelou o novo patrocinador.  (lexical: - | vetorial: 5º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Mercado da bola] A diretoria, na estreia do campeonato, negociou a venda do jovem atacante.  (lexical: - | vetorial: 1º)
+      - [Imprensa] No segundo tempo, o canal de esportes revelou o novo patrocinador.  (lexical: - | vetorial: 2º)
+      - [Mercado da bola] No último jogo do ano, o empresário anunciou a chegada do novo técnico.  (lexical: - | vetorial: 3º)
+      - [Imprensa] O canal de esportes revelou o novo patrocinador na volta das férias.  (lexical: - | vetorial: 4º)
+      - [Imprensa] O canal de esportes, após o intervalo, revelou o novo patrocinador.  (lexical: - | vetorial: 5º)
+
+5. Garotos que subiram para a equipe adulta
+   Busca vetorial:
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (distância: 0.2845)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (distância: 0.2948)
+      - [Categorias de base] Na abertura da rodada, o garoto da base foi promovido ao elenco principal.  (distância: 0.2953)
+      - [Categorias de base] No estádio lotado, o garoto da base foi promovido ao elenco principal.  (distância: 0.3009)
+      - [Categorias de base] O garoto da base estreou no time profissional no segundo tempo.  (distância: 0.3052)
+   Busca lexical (BM25):
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.
+      - [Arbitragem] Na partida transmitida para todo o país, a equipe de arbitragem deu o apito final.
+      - [Arbitragem] A equipe de arbitragem expulsou o volante adversário na partida transmitida para todo o país.
+   RRF com k = 1:
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+   RRF com k = 10:
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+   RRF com k = 60:
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+   RRF com k = 100:
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+   RRF com k = 1000:
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+      - [Arbitragem] Na partida transmitida para todo o país, a equipe de arbitragem deu o apito final.  (lexical: 4º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem expulsou o volante adversário na partida transmitida para todo o país.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem, na partida transmitida para todo o país, marcou o impedimento.  (lexical: 3º | vetorial: -)
+      - [Arbitragem] Na partida transmitida para todo o país, a equipe de arbitragem deu o apito final.  (lexical: 4º | vetorial: -)
+      - [Arbitragem] A equipe de arbitragem expulsou o volante adversário na partida transmitida para todo o país.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Arbitragem] Para delírio da torcida, a equipe de arbitragem deu a bola ao chão.  (lexical: 1º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Arbitragem] A equipe de arbitragem, para delírio da torcida, anulou o gol por impedimento.  (lexical: 2º | vetorial: -)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] Na abertura da rodada, o garoto da base foi promovido ao elenco principal.  (lexical: - | vetorial: 3º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] Na abertura da rodada, o garoto da base foi promovido ao elenco principal.  (lexical: - | vetorial: 3º)
+      - [Categorias de base] No estádio lotado, o garoto da base foi promovido ao elenco principal.  (lexical: - | vetorial: 4º)
+      - [Categorias de base] O garoto da base estreou no time profissional no segundo tempo.  (lexical: - | vetorial: 5º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal no segundo tempo.  (lexical: - | vetorial: 1º)
+      - [Categorias de base] O garoto da base foi promovido ao elenco principal na estreia do campeonato.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] Na abertura da rodada, o garoto da base foi promovido ao elenco principal.  (lexical: - | vetorial: 3º)
+      - [Categorias de base] No estádio lotado, o garoto da base foi promovido ao elenco principal.  (lexical: - | vetorial: 4º)
+      - [Categorias de base] O garoto da base estreou no time profissional no segundo tempo.  (lexical: - | vetorial: 5º)
+
+6. O que o investidor da SAF fez?
+   Busca vetorial:
+      - [Mercado da bola] O investidor da SAF pagou as luvas do reforço em meio à crise.  (distância: 0.2852)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (distância: 0.3011)
+      - [Mercado da bola] Em pleno feriado, o investidor da SAF pagou as luvas do reforço.  (distância: 0.3264)
+      - [Mercado da bola] O investidor da SAF negociou a venda do jovem atacante fora de casa.  (distância: 0.3270)
+      - [Mercado da bola] O investidor da SAF, logo no primeiro minuto, recusou uma proposta milionária.  (distância: 0.3320)
+   Busca lexical (BM25):
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.
+      - [Mercado da bola] O investidor da SAF apresentou o novo uniforme no segundo tempo.
+      - [Mercado da bola] O investidor da SAF sondou o técnico da seleção no gramado encharcado.
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.
+   RRF com k = 1:
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF pagou as luvas do reforço em meio à crise.  (lexical: 73º | vetorial: 1º)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] O investidor da SAF apresentou o novo uniforme no segundo tempo.  (lexical: 3º | vetorial: 36º)
+   RRF com k = 10:
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF apresentou o reforço à torcida no estádio lotado.  (lexical: 7º | vetorial: 12º)
+      - [Mercado da bola] O investidor da SAF pagou as luvas do reforço em meio à crise.  (lexical: 73º | vetorial: 1º)
+   RRF com k = 60:
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF apresentou o reforço à torcida no estádio lotado.  (lexical: 7º | vetorial: 12º)
+      - [Mercado da bola] O investidor da SAF, no estádio do rival, sondou o técnico da seleção.  (lexical: 13º | vetorial: 7º)
+   RRF com k = 100:
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF apresentou o reforço à torcida no estádio lotado.  (lexical: 7º | vetorial: 12º)
+      - [Mercado da bola] O investidor da SAF, no estádio do rival, sondou o técnico da seleção.  (lexical: 13º | vetorial: 7º)
+   RRF com k = 1000:
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF apresentou o reforço à torcida no estádio lotado.  (lexical: 7º | vetorial: 12º)
+      - [Mercado da bola] O investidor da SAF, no estádio do rival, sondou o técnico da seleção.  (lexical: 13º | vetorial: 7º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] O investidor da SAF apresentou o novo uniforme no segundo tempo.  (lexical: 3º | vetorial: 36º)
+      - [Mercado da bola] O investidor da SAF sondou o técnico da seleção no gramado encharcado.  (lexical: 4º | vetorial: 27º)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] O investidor da SAF apresentou o novo uniforme no segundo tempo.  (lexical: 3º | vetorial: 36º)
+      - [Mercado da bola] O investidor da SAF sondou o técnico da seleção no gramado encharcado.  (lexical: 4º | vetorial: 27º)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] O investidor da SAF sondou o técnico da seleção no gramado encharcado.  (lexical: 4º | vetorial: 27º)
+      - [Mercado da bola] O investidor da SAF, no estádio do rival, sondou o técnico da seleção.  (lexical: 13º | vetorial: 7º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] O investidor da SAF pagou as luvas do reforço em meio à crise.  (lexical: 73º | vetorial: 1º)
+      - [Mercado da bola] O investidor da SAF, no estádio lotado, apresentou o novo uniforme.  (lexical: 2º | vetorial: 6º)
+      - [Mercado da bola] Após o intervalo, o investidor da SAF sondou o técnico da seleção.  (lexical: 1º | vetorial: 15º)
+      - [Mercado da bola] O investidor da SAF, no estádio do rival, sondou o técnico da seleção.  (lexical: 13º | vetorial: 7º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Mercado da bola] O investidor da SAF pagou as luvas do reforço em meio à crise.  (lexical: 73º | vetorial: 1º)
+      - [Mercado da bola] Nos acréscimos, o investidor da SAF recusou uma proposta milionária.  (lexical: 5º | vetorial: 2º)
+      - [Mercado da bola] Em pleno feriado, o investidor da SAF pagou as luvas do reforço.  (lexical: 59º | vetorial: 3º)
+      - [Mercado da bola] O investidor da SAF negociou a venda do jovem atacante fora de casa.  (lexical: 77º | vetorial: 4º)
+      - [Mercado da bola] O investidor da SAF, logo no primeiro minuto, recusou uma proposta milionária.  (lexical: 46º | vetorial: 5º)
+
+7. Quem conquistou a Copinha?
+   Busca vetorial:
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (distância: 0.3208)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (distância: 0.3311)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (distância: 0.3497)
+      - [Categorias de base] O garoto da base, no domingo à tarde, conquistou a Copinha.  (distância: 0.3516)
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (distância: 0.3524)
+   Busca lexical (BM25):
+      - [Categorias de base] A promessa do clube, nos acréscimos, conquistou a Copinha.
+      - [Categorias de base] Sob forte chuva, o jovem goleiro conquistou a Copinha.
+      - [Categorias de base] O olheiro conquistou a Copinha no confronto pela copa.
+      - [Categorias de base] O time sub-20, nos acréscimos, conquistou a Copinha.
+      - [Categorias de base] O jovem goleiro conquistou a Copinha após o intervalo.
+   RRF com k = 1:
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] A promessa do clube, nos acréscimos, conquistou a Copinha.  (lexical: 1º | vetorial: 19º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+      - [Categorias de base] Sob forte chuva, o jovem goleiro conquistou a Copinha.  (lexical: 2º | vetorial: 26º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+   RRF com k = 10:
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] A promessa do clube, nos acréscimos, conquistou a Copinha.  (lexical: 1º | vetorial: 19º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+   RRF com k = 60:
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+      - [Categorias de base] A escolinha de futebol, após o intervalo, conquistou a Copinha.  (lexical: 7º | vetorial: 8º)
+   RRF com k = 100:
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] A escolinha de futebol, após o intervalo, conquistou a Copinha.  (lexical: 7º | vetorial: 8º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+   RRF com k = 1000:
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] A escolinha de futebol, após o intervalo, conquistou a Copinha.  (lexical: 7º | vetorial: 8º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Categorias de base] A promessa do clube, nos acréscimos, conquistou a Copinha.  (lexical: 1º | vetorial: 19º)
+      - [Categorias de base] Sob forte chuva, o jovem goleiro conquistou a Copinha.  (lexical: 2º | vetorial: 26º)
+      - [Categorias de base] O olheiro conquistou a Copinha no confronto pela copa.  (lexical: 3º | vetorial: 18º)
+      - [Categorias de base] O time sub-20, nos acréscimos, conquistou a Copinha.  (lexical: 4º | vetorial: 32º)
+      - [Categorias de base] O jovem goleiro conquistou a Copinha após o intervalo.  (lexical: 5º | vetorial: 29º)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] A promessa do clube, nos acréscimos, conquistou a Copinha.  (lexical: 1º | vetorial: 19º)
+      - [Categorias de base] O olheiro conquistou a Copinha no confronto pela copa.  (lexical: 3º | vetorial: 18º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] O coordenador da base, após o intervalo, conquistou a Copinha.  (lexical: 15º | vetorial: 6º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] O coordenador da base, após o intervalo, conquistou a Copinha.  (lexical: 15º | vetorial: 6º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Categorias de base] Fora de casa, a escolinha de futebol conquistou a Copinha.  (lexical: 11º | vetorial: 1º)
+      - [Categorias de base] O garoto da base, fora de casa, conquistou a Copinha.  (lexical: 14º | vetorial: 2º)
+      - [Categorias de base] No estádio lotado, a escolinha de futebol conquistou a Copinha.  (lexical: 9º | vetorial: 3º)
+      - [Categorias de base] O garoto da base, no domingo à tarde, conquistou a Copinha.  (lexical: 27º | vetorial: 4º)
+      - [Categorias de base] No estádio do rival, o olheiro conquistou a Copinha.  (lexical: 6º | vetorial: 5º)
+
+8. Quem garantiu vaga na Libertadores?
+   Busca vetorial:
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (distância: 0.2507)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (distância: 0.2560)
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (distância: 0.2587)
+      - [Campeonato] O favorito ao título garantiu a vaga na Libertadores em meio à crise.  (distância: 0.2635)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (distância: 0.2643)
+   Busca lexical (BM25):
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.
+      - [Campeonato] Na despedida do ídolo, o lanterna garantiu a vaga na Libertadores.
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.
+   RRF com k = 1:
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+      - [Campeonato] Na despedida do ídolo, o lanterna garantiu a vaga na Libertadores.  (lexical: 2º | vetorial: 23º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+   RRF com k = 10:
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.  (lexical: 4º | vetorial: 12º)
+   RRF com k = 60:
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (lexical: 7º | vetorial: 8º)
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.  (lexical: 4º | vetorial: 12º)
+   RRF com k = 100:
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (lexical: 7º | vetorial: 8º)
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.  (lexical: 4º | vetorial: 12º)
+   RRF com k = 1000:
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (lexical: 7º | vetorial: 8º)
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.  (lexical: 4º | vetorial: 12º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Na despedida do ídolo, o lanterna garantiu a vaga na Libertadores.  (lexical: 2º | vetorial: 23º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] Fora de casa, o atual campeão garantiu a vaga na Libertadores.  (lexical: 4º | vetorial: 12º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (lexical: 7º | vetorial: 8º)
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (lexical: 7º | vetorial: 8º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+      - [Campeonato] O favorito ao título garantiu a vaga na Libertadores em meio à crise.  (lexical: 39º | vetorial: 4º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Campeonato] Fora de casa, o time da casa garantiu a vaga na Libertadores.  (lexical: 19º | vetorial: 1º)
+      - [Campeonato] Fora de casa, o time visitante garantiu a vaga na Libertadores.  (lexical: 3º | vetorial: 2º)
+      - [Campeonato] O lanterna, em pleno feriado, garantiu a vaga na Libertadores.  (lexical: 1º | vetorial: 3º)
+      - [Campeonato] O favorito ao título garantiu a vaga na Libertadores em meio à crise.  (lexical: 39º | vetorial: 4º)
+      - [Campeonato] O lanterna garantiu a vaga na Libertadores em meio à crise.  (lexical: 5º | vetorial: 5º)
+
+9. O que aconteceu com o time sub-17?
+   Busca vetorial:
+      - [Categorias de base] Em meio à crise, o treinador do sub-17 impressionou a comissão técnica.  (distância: 0.3409)
+      - [Categorias de base] Em meio à crise, a escolinha de futebol disputou a final do sub-17.  (distância: 0.3548)
+      - [Categorias de base] O treinador do sub-17, em meio à crise, foi promovido ao elenco principal.  (distância: 0.3566)
+      - [Categorias de base] Depois de três derrotas seguidas, o treinador do sub-17 impressionou os olheiros europeus.  (distância: 0.3569)
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (distância: 0.3574)
+   Busca lexical (BM25):
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.
+      - [Categorias de base] O time sub-15 disputou a final do sub-17 após o intervalo.
+      - [Categorias de base] O treinador do sub-17 estreou com gol na volta das férias.
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 nos acréscimos.
+   RRF com k = 1:
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.  (lexical: 1º | vetorial: 51º)
+      - [Categorias de base] Em meio à crise, o treinador do sub-17 impressionou a comissão técnica.  (lexical: - | vetorial: 1º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.  (lexical: 2º | vetorial: 39º)
+      - [Categorias de base] Em meio à crise, a escolinha de futebol disputou a final do sub-17.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+   RRF com k = 10:
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.  (lexical: 1º | vetorial: 51º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.  (lexical: 2º | vetorial: 39º)
+      - [Categorias de base] O time sub-15 disputou a final do sub-17 após o intervalo.  (lexical: 3º | vetorial: 35º)
+   RRF com k = 60:
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no domingo à tarde.  (lexical: 11º | vetorial: 15º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 na volta das férias.  (lexical: 14º | vetorial: 16º)
+      - [Categorias de base] Sob forte chuva, o time sub-20 disputou a final do sub-17.  (lexical: 8º | vetorial: 25º)
+   RRF com k = 100:
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no domingo à tarde.  (lexical: 11º | vetorial: 15º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 na volta das férias.  (lexical: 14º | vetorial: 16º)
+      - [Categorias de base] Sob forte chuva, o time sub-20 disputou a final do sub-17.  (lexical: 8º | vetorial: 25º)
+   RRF com k = 1000:
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no domingo à tarde.  (lexical: 11º | vetorial: 15º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 na volta das férias.  (lexical: 14º | vetorial: 16º)
+      - [Categorias de base] Sob forte chuva, o time sub-20 disputou a final do sub-17.  (lexical: 8º | vetorial: 25º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.  (lexical: 1º | vetorial: 51º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.  (lexical: 2º | vetorial: 39º)
+      - [Categorias de base] O time sub-15 disputou a final do sub-17 após o intervalo.  (lexical: 3º | vetorial: 35º)
+      - [Categorias de base] O treinador do sub-17 estreou com gol na volta das férias.  (lexical: 4º | vetorial: 57º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 nos acréscimos.  (lexical: 5º | vetorial: -)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.  (lexical: 1º | vetorial: 51º)
+      - [Categorias de base] O time sub-15 disputou a final do sub-17 após o intervalo.  (lexical: 3º | vetorial: 35º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.  (lexical: 2º | vetorial: 39º)
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 estreou com gol na volta das férias.  (lexical: 4º | vetorial: 57º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] O time sub-15 disputou a final do sub-17 após o intervalo.  (lexical: 3º | vetorial: 35º)
+      - [Categorias de base] O time sub-20 disputou a final do sub-17 após o intervalo.  (lexical: 2º | vetorial: 39º)
+      - [Categorias de base] Sob forte chuva, o treinador do sub-17 estreou com gol.  (lexical: 1º | vetorial: 51º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+      - [Categorias de base] O treinador do sub-17 assinou com um clube europeu no jogo do returno.  (lexical: 12º | vetorial: 6º)
+      - [Categorias de base] Em meio à crise, o treinador do sub-17 impressionou a comissão técnica.  (lexical: - | vetorial: 1º)
+      - [Categorias de base] Em meio à crise, a escolinha de futebol disputou a final do sub-17.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] O treinador do sub-17, em meio à crise, foi promovido ao elenco principal.  (lexical: - | vetorial: 3º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Categorias de base] Em meio à crise, o treinador do sub-17 impressionou a comissão técnica.  (lexical: - | vetorial: 1º)
+      - [Categorias de base] Em meio à crise, a escolinha de futebol disputou a final do sub-17.  (lexical: - | vetorial: 2º)
+      - [Categorias de base] O treinador do sub-17, em meio à crise, foi promovido ao elenco principal.  (lexical: - | vetorial: 3º)
+      - [Categorias de base] Depois de três derrotas seguidas, o treinador do sub-17 impressionou os olheiros europeus.  (lexical: - | vetorial: 4º)
+      - [Categorias de base] Antes do intervalo, o treinador do sub-17 assinou com um clube europeu.  (lexical: 7º | vetorial: 5º)
+
+10. O que a imprensa falou sobre o esquema tático?
+   Busca vetorial:
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (distância: 0.3069)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (distância: 0.3072)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (distância: 0.3079)
+      - [Imprensa] Na rodada de domingo, a coluna do jornal criticou o esquema tático.  (distância: 0.3089)
+      - [Imprensa] No estádio lotado, a repórter de campo criticou o esquema tático.  (distância: 0.3148)
+   Busca lexical (BM25):
+      - [Imprensa] O narrador criticou o esquema tático após o intervalo.
+      - [Imprensa] No segundo tempo, o setorista criticou o esquema tático.
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.
+      - [Imprensa] O setorista criticou o esquema tático na volta das férias.
+   RRF com k = 1:
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O narrador criticou o esquema tático após o intervalo.  (lexical: 1º | vetorial: 43º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] No segundo tempo, o setorista criticou o esquema tático.  (lexical: 2º | vetorial: 47º)
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+   RRF com k = 10:
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+   RRF com k = 60:
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+   RRF com k = 100:
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+   RRF com k = 1000:
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+   Média ponderada (vetorial 0.00 / lexical 1.00):
+      - [Imprensa] O narrador criticou o esquema tático após o intervalo.  (lexical: 1º | vetorial: 43º)
+      - [Imprensa] No segundo tempo, o setorista criticou o esquema tático.  (lexical: 2º | vetorial: 47º)
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O setorista criticou o esquema tático na volta das férias.  (lexical: 5º | vetorial: 36º)
+   Média ponderada (vetorial 0.25 / lexical 0.75):
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] O narrador criticou o esquema tático após o intervalo.  (lexical: 1º | vetorial: 43º)
+      - [Imprensa] No segundo tempo, o setorista criticou o esquema tático.  (lexical: 2º | vetorial: 47º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+   Média ponderada (vetorial 0.50 / lexical 0.50):
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+   Média ponderada (vetorial 0.75 / lexical 0.25):
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+      - [Imprensa] Antes do intervalo, o comentarista criticou o esquema tático.  (lexical: 3º | vetorial: 9º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático após o intervalo.  (lexical: 4º | vetorial: 13º)
+   Média ponderada (vetorial 1.00 / lexical 0.00):
+      - [Imprensa] Em noite de casa cheia, o comentarista criticou o esquema tático.  (lexical: 16º | vetorial: 1º)
+      - [Imprensa] O jornalista esportivo criticou o esquema tático no meio da semana.  (lexical: 13º | vetorial: 2º)
+      - [Imprensa] O jornalista esportivo, na volta das férias, criticou o esquema tático.  (lexical: 17º | vetorial: 3º)
+      - [Imprensa] Na rodada de domingo, a coluna do jornal criticou o esquema tático.  (lexical: 55º | vetorial: 4º)
+      - [Imprensa] No estádio lotado, a repórter de campo criticou o esquema tático.  (lexical: 41º | vetorial: 5º)
+

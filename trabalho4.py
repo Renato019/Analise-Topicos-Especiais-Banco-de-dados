@@ -69,8 +69,7 @@ perguntas = [
     "O que a imprensa falou sobre o esquema tático?",
 ]
 
-modelos = ["paraphrase-multilingual-MiniLM-L12-v2"]
-# modelos = ["paraphrase-multilingual-MiniLM-L12-v2", "BAAI/bge-m3"]
+modelos = ["paraphrase-multilingual-MiniLM-L12-v2", "BAAI/bge-m3"]
 
 candidatos = 100  # quantas frases cada busca traz antes da união
 valores_k = [1, 10, 60, 100, 1000]
