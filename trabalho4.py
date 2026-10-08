@@ -1,7 +1,15 @@
 import csv
+import re
 import time
 import chromadb
 from chromadb.utils import embedding_functions
+from rank_bm25 import BM25Okapi
+
+
+def separar_palavras(texto):
+    # deixa tudo minúsculo e tira a pontuação, para "jogo?" virar "jogo"
+    return re.findall(r"\w+", texto.lower())
+
 
 with open("dataset_futebol_10k.csv", "r", encoding="utf-8-sig") as arquivo:
     frases = [linha["frase"] for linha in csv.DictReader(arquivo)]
@@ -24,6 +32,9 @@ perguntas = [
 
 modelos = ["paraphrase-multilingual-MiniLM-L12-v2"]
 # modelos = ["paraphrase-multilingual-MiniLM-L12-v2", "BAAI/bge-m3"]
+
+# busca lexical: o BM25 recebe cada frase separada em palavras
+bm25 = BM25Okapi([separar_palavras(frase) for frase in frases])
 
 
 cliente = chromadb.Client()
@@ -65,9 +76,17 @@ for modelo in modelos:
 
         for p, pergunta in enumerate(perguntas):
             saida.write(f"{p + 1}. {pergunta}\n")
+
+            saida.write("   Busca vetorial:\n")
             frases_encontradas = resultado["documents"][p]
             distancias = resultado["distances"][p]
             for frase, distancia in zip(frases_encontradas, distancias):
-                saida.write(f"   - {frase}  (distância: {distancia:.4f})\n")
+                saida.write(f"      - {frase}  (distância: {distancia:.4f})\n")
+
+            saida.write("   Busca lexical (BM25):\n")
+            frases_lexical = bm25.get_top_n(separar_palavras(pergunta), frases, n=5)
+            for frase in frases_lexical:
+                saida.write(f"      - {frase}\n")
+
             saida.write("\n")
     print(f"Arquivo gerado: {nome_saida}")
