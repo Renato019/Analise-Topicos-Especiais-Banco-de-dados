@@ -20,6 +20,25 @@ def rrf(lista_lexical, lista_vetorial, k):
     return sorted(pontos, key=pontos.get, reverse=True)
 
 
+def normalizar(notas):
+    # coloca as notas entre 0 e 1: a maior vira 1 e a menor vira 0
+    maior = max(notas.values())
+    menor = min(notas.values())
+    if maior == menor:
+        return {frase: 1.0 for frase in notas}
+    return {frase: (nota - menor) / (maior - menor) for frase, nota in notas.items()}
+
+
+def media_ponderada(notas_lexical, notas_vetorial, peso):
+    # peso é o quanto vale a busca vetorial; a lexical fica com o resto
+    lexical = normalizar(notas_lexical)
+    vetorial = normalizar(notas_vetorial)
+    pontos = {}
+    for frase in list(lexical) + list(vetorial):
+        pontos[frase] = peso * vetorial.get(frase, 0) + (1 - peso) * lexical.get(frase, 0)
+    return sorted(pontos, key=pontos.get, reverse=True)
+
+
 def posicao(frase, lista):
     # em que lugar a frase ficou na lista ("-" se não apareceu)
     if frase in lista:
@@ -32,6 +51,7 @@ with open("dataset_futebol_10k.csv", "r", encoding="utf-8-sig") as arquivo:
 
 frases = [linha["frase"] for linha in linhas]
 assunto = {linha["frase"]: linha["assunto"] for linha in linhas}
+numero = {frase: i for i, frase in enumerate(frases)}  # em que linha está cada frase
 
 print(f"Frases lidas: {len(frases)}")
 
@@ -54,6 +74,7 @@ modelos = ["paraphrase-multilingual-MiniLM-L12-v2"]
 
 candidatos = 100  # quantas frases cada busca traz antes da união
 valores_k = [1, 10, 60, 100, 1000]
+pesos = [0.0, 0.25, 0.5, 0.75, 1.0]  # peso da busca vetorial na média ponderada
 
 # busca lexical: o BM25 recebe cada frase separada em palavras
 bm25 = BM25Okapi([separar_palavras(frase) for frase in frases])
@@ -103,6 +124,11 @@ for modelo in modelos:
             distancias = resultado["distances"][p]
             lista_lexical = bm25.get_top_n(separar_palavras(pergunta), frases, n=candidatos)
 
+            # nota que cada busca deu para as suas frases
+            notas_bm25 = bm25.get_scores(separar_palavras(pergunta))
+            notas_lexical = {frase: notas_bm25[numero[frase]] for frase in lista_lexical}
+            notas_vetorial = {frase: 1 - d for frase, d in zip(lista_vetorial, distancias)}
+
             saida.write("   Busca vetorial:\n")
             for frase, distancia in zip(lista_vetorial[:5], distancias[:5]):
                 saida.write(f"      - [{assunto[frase]}] {frase}  (distância: {distancia:.4f})\n")
@@ -114,6 +140,15 @@ for modelo in modelos:
             for k in valores_k:
                 saida.write(f"   RRF com k = {k}:\n")
                 for frase in rrf(lista_lexical, lista_vetorial, k)[:5]:
+                    saida.write(
+                        f"      - [{assunto[frase]}] {frase}  "
+                        f"(lexical: {posicao(frase, lista_lexical)} | "
+                        f"vetorial: {posicao(frase, lista_vetorial)})\n"
+                    )
+
+            for peso in pesos:
+                saida.write(f"   Média ponderada (vetorial {peso:.2f} / lexical {1 - peso:.2f}):\n")
+                for frase in media_ponderada(notas_lexical, notas_vetorial, peso)[:5]:
                     saida.write(
                         f"      - [{assunto[frase]}] {frase}  "
                         f"(lexical: {posicao(frase, lista_lexical)} | "
