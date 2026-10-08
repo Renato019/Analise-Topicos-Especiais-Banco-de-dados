@@ -11,8 +11,27 @@ def separar_palavras(texto):
     return re.findall(r"\w+", texto.lower())
 
 
+def rrf(lista_lexical, lista_vetorial, k):
+    # cada frase ganha 1 / (k + posição) em cada lista em que aparece
+    pontos = {}
+    for lista in (lista_lexical, lista_vetorial):
+        for posicao, frase in enumerate(lista, start=1):
+            pontos[frase] = pontos.get(frase, 0) + 1 / (k + posicao)
+    return sorted(pontos, key=pontos.get, reverse=True)
+
+
+def posicao(frase, lista):
+    # em que lugar a frase ficou na lista ("-" se não apareceu)
+    if frase in lista:
+        return f"{lista.index(frase) + 1}º"
+    return "-"
+
+
 with open("dataset_futebol_10k.csv", "r", encoding="utf-8-sig") as arquivo:
-    frases = [linha["frase"] for linha in csv.DictReader(arquivo)]
+    linhas = list(csv.DictReader(arquivo))
+
+frases = [linha["frase"] for linha in linhas]
+assunto = {linha["frase"]: linha["assunto"] for linha in linhas}
 
 print(f"Frases lidas: {len(frases)}")
 
@@ -32,6 +51,9 @@ perguntas = [
 
 modelos = ["paraphrase-multilingual-MiniLM-L12-v2"]
 # modelos = ["paraphrase-multilingual-MiniLM-L12-v2", "BAAI/bge-m3"]
+
+candidatos = 100  # quantas frases cada busca traz antes da união
+valores_k = [1, 10, 60, 100, 1000]
 
 # busca lexical: o BM25 recebe cada frase separada em palavras
 bm25 = BM25Okapi([separar_palavras(frase) for frase in frases])
@@ -66,7 +88,7 @@ for modelo in modelos:
 
     resultado = colecao.query(
         query_texts=perguntas,
-        n_results=5,
+        n_results=candidatos,
     )
 
     nome_saida = f"trabalho4-output-{nome_curto}.txt"
@@ -77,16 +99,26 @@ for modelo in modelos:
         for p, pergunta in enumerate(perguntas):
             saida.write(f"{p + 1}. {pergunta}\n")
 
-            saida.write("   Busca vetorial:\n")
-            frases_encontradas = resultado["documents"][p]
+            lista_vetorial = resultado["documents"][p]
             distancias = resultado["distances"][p]
-            for frase, distancia in zip(frases_encontradas, distancias):
-                saida.write(f"      - {frase}  (distância: {distancia:.4f})\n")
+            lista_lexical = bm25.get_top_n(separar_palavras(pergunta), frases, n=candidatos)
+
+            saida.write("   Busca vetorial:\n")
+            for frase, distancia in zip(lista_vetorial[:5], distancias[:5]):
+                saida.write(f"      - [{assunto[frase]}] {frase}  (distância: {distancia:.4f})\n")
 
             saida.write("   Busca lexical (BM25):\n")
-            frases_lexical = bm25.get_top_n(separar_palavras(pergunta), frases, n=5)
-            for frase in frases_lexical:
-                saida.write(f"      - {frase}\n")
+            for frase in lista_lexical[:5]:
+                saida.write(f"      - [{assunto[frase]}] {frase}\n")
+
+            for k in valores_k:
+                saida.write(f"   RRF com k = {k}:\n")
+                for frase in rrf(lista_lexical, lista_vetorial, k)[:5]:
+                    saida.write(
+                        f"      - [{assunto[frase]}] {frase}  "
+                        f"(lexical: {posicao(frase, lista_lexical)} | "
+                        f"vetorial: {posicao(frase, lista_vetorial)})\n"
+                    )
 
             saida.write("\n")
     print(f"Arquivo gerado: {nome_saida}")
