@@ -1,0 +1,73 @@
+Modelo: paraphrase-multilingual-MiniLM-L12-v2
+Tempo para adicionar as frases: 27.7 segundos
+
+1. Quem se machucou durante o jogo?
+   - O jogador reserva sofreu uma lesão muscular no jogo do returno.  (distância: 0.2634)
+   - O zagueiro, no estádio do rival, marcou um golaço.  (distância: 0.2775)
+   - O canal de esportes noticiou a lesão do artilheiro no confronto pela copa.  (distância: 0.2800)
+   - O jogador reserva sofreu uma lesão muscular na abertura da rodada.  (distância: 0.2814)
+   - A torcida visitante, no gramado encharcado, vaiou o jogador adversário.  (distância: 0.2878)
+
+2. O juiz usou a tecnologia para rever a jogada?
+   - No gramado encharcado, o juiz da partida revisou o lance no monitor.  (distância: 0.2679)
+   - O juiz da partida, no gramado encharcado, marcou o impedimento.  (distância: 0.2958)
+   - O juiz da partida revisou o lance no monitor para delírio da torcida.  (distância: 0.3007)
+   - O juiz da partida, nos acréscimos, revisou o toque de mão.  (distância: 0.3177)
+   - No segundo tempo, o juiz da partida revisou o lance no monitor.  (distância: 0.3277)
+
+3. Como os fãs mostraram insatisfação com o treinador?
+   - O capitão do time, na reta final da temporada, deu um drible desconcertante.  (distância: 0.2997)
+   - No jogo do returno, o comentarista noticiou a demissão do treinador.  (distância: 0.3155)
+   - Na abertura da rodada, o capitão do time deu um drible desconcertante.  (distância: 0.3160)
+   - O capitão do time, no estádio lotado, sofreu um pênalti.  (distância: 0.3162)
+   - O capitão do time, na despedida do ídolo, deu um drible desconcertante.  (distância: 0.3251)
+
+4. Quais equipes compraram novos atletas?
+   - O time sub-15, na volta das férias, revelou um novo talento.  (distância: 0.3911)
+   - O time sub-20, no estádio lotado, revelou um novo talento.  (distância: 0.3912)
+   - No clássico de quarta-feira, o clube rival apresentou o novo uniforme.  (distância: 0.4011)
+   - No estádio do rival, o clube rival apresentou o novo uniforme.  (distância: 0.4057)
+   - Pela primeira vez na temporada, o clube rival apresentou o novo uniforme.  (distância: 0.4135)
+
+5. Garotos que subiram para a equipe adulta
+   - Nos acréscimos, o menino da comunidade estreou no time profissional.  (distância: 0.3233)
+   - O time sub-20, fora de casa, estreou no time profissional.  (distância: 0.3667)
+   - O treinador do sub-17 estreou no time profissional no gramado encharcado.  (distância: 0.3783)
+   - O time do interior empatou o jogo de ida nos acréscimos.  (distância: 0.3823)
+   - O time da casa, no jogo de ida, empatou com o rival.  (distância: 0.3827)
+
+6. O que o investidor da SAF fez?
+   - O investidor da SAF sondou o técnico da seleção no gramado encharcado.  (distância: 0.2442)
+   - O investidor da SAF, logo no primeiro minuto, negociou o empréstimo do lateral.  (distância: 0.2571)
+   - O investidor da SAF, na estreia do campeonato, negociou o empréstimo do lateral.  (distância: 0.2655)
+   - No domingo à tarde, o investidor da SAF negociou o empréstimo do lateral.  (distância: 0.2762)
+   - O investidor da SAF, durante a pré-temporada, negociou a liberação do meia.  (distância: 0.2782)
+
+7. Quem conquistou a Copinha?
+   - O olheiro, na partida transmitida para todo o país, conquistou a Copinha.  (distância: 0.3431)
+   - O olheiro conquistou a Copinha no confronto pela copa.  (distância: 0.3726)
+   - No clássico de quarta-feira, o menino da comunidade conquistou a Copinha.  (distância: 0.4045)
+   - O atual campeão, no gramado encharcado, venceu por goleada.  (distância: 0.4301)
+   - O menino da comunidade, no clássico de quarta-feira, conquistou a Copinha.  (distância: 0.4322)
+
+8. Quem garantiu vaga na Libertadores?
+   - O vice-líder, no gramado encharcado, garantiu a vaga na Libertadores.  (distância: 0.3131)
+   - O favorito ao título garantiu a vaga na Libertadores em meio à crise.  (distância: 0.3683)
+   - O favorito ao título, durante a pré-temporada, garantiu a vaga na Libertadores.  (distância: 0.3964)
+   - O vice-líder, na partida transmitida para todo o país, garantiu a vaga na Libertadores.  (distância: 0.4044)
+   - O atual campeão, na decisão do estadual, garantiu a vaga na Libertadores.  (distância: 0.4097)
+
+9. O que aconteceu com o time sub-17?
+   - Nos acréscimos, o treinador do sub-17 disputou a final do sub-17.  (distância: 0.2322)
+   - O treinador do sub-17, no jogo do centenário do clube, disputou a final do sub-17.  (distância: 0.2914)
+   - O treinador do sub-17, no jogo de ida, disputou a final do sub-17.  (distância: 0.2914)
+   - No estádio lotado, o treinador do sub-17 disputou a final do sub-17.  (distância: 0.2979)
+   - O treinador do sub-17 estreou no time profissional após o intervalo.  (distância: 0.3047)
+
+10. O que a imprensa falou sobre o esquema tático?
+   - Antes do intervalo, a repórter de campo criticou o esquema tático.  (distância: 0.3733)
+   - A coluna do jornal, na rodada de domingo, revelou os bastidores da negociação.  (distância: 0.4122)
+   - A repórter de campo revelou os bastidores da negociação no meio da semana.  (distância: 0.4192)
+   - A repórter de campo criticou o esquema tático no gramado encharcado.  (distância: 0.4299)
+   - Durante a pré-temporada, a coluna do jornal criticou o esquema tático.  (distância: 0.4307)
+
